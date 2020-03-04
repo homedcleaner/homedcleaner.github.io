@@ -1,28 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!-- load of the external libraries needed by Blapy (provided in the package) -->
-  <script type="text/javascript" src="/Blapy-master/extlib/jquery-3.3.1.min.js"></script>
-  <script type="text/javascript" src="/Blapy-master/extlib/sammy/lib/sammy.js"></script>
-  <script type="text/javascript" src="/Blapy-master/extlib/iFSM/extlib/jquery.dotimeout.js"></script>
-  <script type="text/javascript" src="/Blapy-master/extlib/iFSM/extlib/jquery.attrchange.js"></script>
-  <script type="text/javascript" src="/Blapy-master/extlib/json2html/json2html.js"></script>  
-  <script type="text/javascript" src="/Blapy-master/extlib/iFSM/iFSM.js"></script>
-  <!-- load of the Blapy script -->
-  <script type="text/javascript" src="/Blapy-master/Blapy.js"></script>
 </head>
 <!-- start Blapy -->
-<body id="myBlapy">
-  <div  id="mainContainer"
-        data-blapy-container="true"
-        data-blapy-container-name="mainContainer"
-        data-blapy-container-content="helloWorld Test1">
+<body>
+  <div id="my-github-projects"/>
   	Hello World...
   </div>
-  <script>
-  	$( document ).ready(function() {
-  		$('#myBlapy').Blapy();
-  	});
-  </script>
+  <script src="http://ajax.microsoft.com/ajax/jquery/jquery-3.4.1.min.js" type="text/javascript"></script>
+  <script src="/javascripts/git.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    $(function() {
+        $("#my-github-projects").loadRepositories("homedcleaner");
+    });
+</script>
 </body>
 </html>
